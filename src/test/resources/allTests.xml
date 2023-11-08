@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="First Suite">
+    <groups>
+        <run>
+            <include name="qa"/>
+            <exclude name="addition"/>
+        </run>
+    </groups>
+
+    <test name="All Tests">
+        <packages>
+            <package name="hillel"/>
+        </packages>
+    </test>
+</suite>

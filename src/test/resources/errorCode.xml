@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="First Suite">
+    <test name="ErrorCode">
+        <classes>
+            <class name="hillel.testNgDemo.ErrorCodeMapperTest">
+                <parameter name="code" value="${codeValue}"></parameter>
+            </class>
+        </classes>
+    </test>
+</suite>
