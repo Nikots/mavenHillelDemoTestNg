@@ -1,4 +1,4 @@
-package hillel.testNgDemo.parallelTests;
+package hillel.testNgDemo_lesson17.parallelTests;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;

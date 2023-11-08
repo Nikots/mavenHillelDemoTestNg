@@ -1,4 +1,4 @@
-package hillel.testNgDemo;
+package hillel.testNgDemo_lesson17;
 
 import hillel.Calculator;
 import org.testng.annotations.AfterClass;

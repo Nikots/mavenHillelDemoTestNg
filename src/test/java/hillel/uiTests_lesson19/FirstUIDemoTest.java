@@ -1,8 +1,7 @@
-package hillel.uiTests;
+package hillel.uiTests_lesson19;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +12,8 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class FirstDemoTest {
+//Lesson #19
+public class FirstUIDemoTest {
     WebDriver driver;
     @BeforeMethod
     public void setup() {
