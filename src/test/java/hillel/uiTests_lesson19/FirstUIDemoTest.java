@@ -1,34 +1,18 @@
 package hillel.uiTests_lesson19;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 //Lesson #19
-public class FirstUIDemoTest {
-    WebDriver driver;
-    @BeforeMethod
-    public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+public class FirstUIDemoTest extends BaseTest {
 
     @Test
-    public void test1() {
-        //System.setProperty("webdriver.chrome.driver", "/Users/ninakotsar/IdeaProjects/mavenHillelDemoTestNg/src/test/resources/chromedriver");
+    public void testCheckbox() {
+        //System.setProperty("webdriver.chrome.driver", "/src/test/resources/chromedriver");
         driver.get("https://the-internet.herokuapp.com/checkboxes");
         WebElement checkbox1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
         checkbox1.click();
@@ -37,24 +21,23 @@ public class FirstUIDemoTest {
     }
 
     @Test
-    public void test2() {
+    public void testInput() {
         driver.get("https://the-internet.herokuapp.com/key_presses");
         WebElement inputField = driver.findElement(By.id("target"));
         inputField.sendKeys("1");
 
         WebElement label = driver.findElement(By.id("result"));
         String color = label.getAttribute("style");
-        Assert.assertEquals("color:green", color);
+        Assert.assertEquals(color, "color: green;");
 
-       // String text = label.getText();
-        Assert.assertEquals("You entered: 1", label.getText());
+        Assert.assertEquals(label.getText(), "You entered: 1");
 
         inputField.clear();
     }
 
 
     @Test
-    public void test3() {
+    public void testChainOfFindElements() {
         driver.get("https://the-internet.herokuapp.com/status_codes");
 
         List<WebElement> statusCodes = driver.findElement(By.tagName("ul")).findElements(By.tagName("a"));
@@ -63,7 +46,7 @@ public class FirstUIDemoTest {
     }
 
     @Test
-    public void testLinkedIn() throws InterruptedException {
+    public void testLinkedInMenu() throws InterruptedException {
         driver.get("https://www.linkedin.com/");
         Thread.sleep(5000);
 
