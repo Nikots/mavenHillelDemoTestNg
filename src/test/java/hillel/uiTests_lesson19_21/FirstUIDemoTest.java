@@ -1,4 +1,4 @@
-package hillel.uiTests_lesson19_20;
+package hillel.uiTests_lesson19_21;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

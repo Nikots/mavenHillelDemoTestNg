@@ -1,4 +1,4 @@
-package hillel.uiTests_lesson19_20;
+package hillel.uiTests_lesson19_21;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -72,7 +72,10 @@ public class WaitsTest extends BaseTest {
         button.click();
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(button).click().build().perform();
+        actions.moveToElement(button)
+                .click()
+                .build()
+                .perform();
     }
 
     @Test
