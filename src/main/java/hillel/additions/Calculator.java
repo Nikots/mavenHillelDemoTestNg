@@ -1,4 +1,4 @@
-package hillel;
+package hillel.additions;
 
 public class Calculator {
 

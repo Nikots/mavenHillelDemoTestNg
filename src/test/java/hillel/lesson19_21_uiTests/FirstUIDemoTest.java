@@ -1,5 +1,6 @@
-package hillel.uiTests_lesson19_21;
+package hillel.lesson19_21_uiTests;
 
+import hillel.utils.BaseUiTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 //Lesson #19
-public class FirstUIDemoTest extends BaseTest {
+public class FirstUIDemoTest extends BaseUiTest {
 
     @Test
     public void testCheckbox() {

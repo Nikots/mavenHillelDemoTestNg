@@ -9,7 +9,7 @@
 
     <test name="All Tests">
         <packages>
-            <package name="hillel.testNgDemo_lesson17"/>
+            <package name="hillel.lesson17_testNgDemo"/>
         </packages>
     </test>
 </suite>

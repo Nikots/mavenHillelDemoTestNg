@@ -1,5 +1,6 @@
-package hillel.uiTests_lesson19_21;
+package hillel.lesson19_21_uiTests;
 
+import hillel.utils.BaseUiTest;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,7 +16,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 //Lesson #21
-public class ActionsAndJSTest extends BaseTest {
+public class ActionsAndJSTest extends BaseUiTest {
 
     @Test
     public void selectFromMenu() {

@@ -2,13 +2,13 @@
 <suite name="Parallel" parallel="tests">
     <test name="par1">
         <classes>
-            <class name="hillel.testNgDemo_lesson17.parallelTests.ParallelTest1"/>
+            <class name="hillel.lesson17_testNgDemo.parallelTests.ParallelTest1"/>
         </classes>
     </test>
 
     <test name="par2">
         <classes>
-            <class name="hillel.testNgDemo_lesson17.parallelTests.ParallelTest2"/>
+            <class name="hillel.lesson17_testNgDemo.parallelTests.ParallelTest2"/>
         </classes>
     </test>
 </suite>

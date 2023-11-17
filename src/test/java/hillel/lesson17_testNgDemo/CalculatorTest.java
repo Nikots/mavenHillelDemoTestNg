@@ -1,6 +1,6 @@
-package hillel.testNgDemo_lesson17;
+package hillel.lesson17_testNgDemo;
 
-import hillel.Calculator;
+import hillel.additions.Calculator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;

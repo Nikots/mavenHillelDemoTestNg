@@ -1,6 +1,6 @@
-package hillel.testNgDemo_lesson17;
+package hillel.lesson17_testNgDemo;
 
-import hillel.ErrorCodeMapper;
+import hillel.additions.ErrorCodeMapper;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;

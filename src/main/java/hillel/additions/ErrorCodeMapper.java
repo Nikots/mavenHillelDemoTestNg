@@ -1,4 +1,4 @@
-package hillel;
+package hillel.additions;
 
 import java.util.HashMap;
 import java.util.Map;

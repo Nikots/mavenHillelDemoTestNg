@@ -1,5 +1,6 @@
-package hillel.uiTests_lesson19_21;
+package hillel.utils;
 
+import hillel.pages.MainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -9,19 +10,26 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-public class BaseTest {
-    WebDriver driver;
+public class BaseUiTest {
+    public WebDriver driver;
+
     @BeforeMethod
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().window().setSize(new Dimension(1440,1100));
+        driver.manage().window().setSize(new Dimension(1440, 1100));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
     }
 
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+        if (driver != null)
+            driver.quit();
+    }
+
+    public MainPage openMainPage() {
+        driver.get("https://the-internet.herokuapp.com/");
+        return new MainPage(driver);
     }
 
 }

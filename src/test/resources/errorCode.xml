@@ -2,7 +2,7 @@
 <suite name="First Suite">
     <test name="ErrorCode">
         <classes>
-            <class name="hillel.testNgDemo_lesson17.ErrorCodeMapperTest">
+            <class name="hillel.lesson17_testNgDemo.ErrorCodeMapperTest">
                 <parameter name="code" value="${codeValue}"/>
             </class>
         </classes>

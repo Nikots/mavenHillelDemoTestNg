@@ -1,0 +1,31 @@
+project-name/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── example/
+│   │               ├── pages/
+│   │               │   ├── LoginPage.java
+│   │               │   └── PersonalDetailsPage.java
+│   │               │
+│   │               └── utils/
+│   │                   └── WebDriverUtils.java
+│   │
+│   └── test/
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           ├── tests/
+│       │           │   ├── LoginTest.java
+│       │           │   └── PersonalDetailsTest.java
+│       │           │
+│       │           └── utils/
+│       │               └── TestBase.java
+│       │
+│       └── resources/
+│           └── testdata/
+│               └── testdata.properties
+│
+├── pom.xml
+└── README.md

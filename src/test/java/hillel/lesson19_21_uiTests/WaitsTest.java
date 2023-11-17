@@ -1,5 +1,6 @@
-package hillel.uiTests_lesson19_21;
+package hillel.lesson19_21_uiTests;
 
+import hillel.utils.BaseUiTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 //Lesson #20
-public class WaitsTest extends BaseTest {
+public class WaitsTest extends BaseUiTest {
 
     @Test
     public void testSleep() throws InterruptedException {

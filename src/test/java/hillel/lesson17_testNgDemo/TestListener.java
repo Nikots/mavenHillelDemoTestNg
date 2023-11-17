@@ -1,4 +1,4 @@
-package hillel.testNgDemo_lesson17;
+package hillel.lesson17_testNgDemo;
 
 import org.testng.ITestListener;
 import org.testng.ITestResult;
