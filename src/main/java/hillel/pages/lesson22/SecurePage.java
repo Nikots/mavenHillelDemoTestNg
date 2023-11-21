@@ -1,5 +1,6 @@
-package hillel.pages;
+package hillel.pages.lesson22;
 
+import hillel.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,4 +1,4 @@
-package hillel.lesson22_pom;
+package hillel.lesson22_patterns_part1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

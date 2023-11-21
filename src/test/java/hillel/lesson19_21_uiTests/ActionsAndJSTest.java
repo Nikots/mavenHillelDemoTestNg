@@ -149,6 +149,10 @@ public class ActionsAndJSTest extends BaseUiTest {
         Alert alert = driver.switchTo().alert();
         alert.accept();
 
+        driver.switchTo().defaultContent();
+        WebElement button2 = driver.findElement(By.xpath("//button[text()='Click for JS Confirm']"));
+        button2.click();
+
     }
 
     @Test

@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Singleton">
+    <test name="SingleTonTest" parallel="methods" thread-count="4">
+        <classes>
+            <class name="hillel.lesson23_patterns_part2.SingletonTest"/>
+        </classes>
+    </test>
+</suite>
