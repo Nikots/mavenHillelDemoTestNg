@@ -1,0 +1,9 @@
+Capabilities are options that you can use to customize and configure a ChromeDriver session. This page documents all ChromeDriver supported capabilities and how to use them.
+
+The WebDriver language APIs provides ways to pass capabilities to ChromeDriver. The exact mechanism differs by the language, but most languages use one or both of the following mechanisms:
+
+Use the ChromeOptions class. This is supported by Java, Python, etc.
+
+Use the DesiredCapabilities class. This is supported by Python, Ruby, etc. While it is also available in Java, its usage in Java is deprecated.
+
+Using the ChromeOptions class
