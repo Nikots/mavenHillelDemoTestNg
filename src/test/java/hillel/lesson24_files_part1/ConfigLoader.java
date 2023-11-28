@@ -1,4 +1,4 @@
-package hillel.lesson24_files;
+package hillel.lesson24_files_part1;
 
 import java.io.IOException;
 import java.io.InputStream;

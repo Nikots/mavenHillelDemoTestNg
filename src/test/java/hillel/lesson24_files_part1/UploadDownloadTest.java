@@ -1,4 +1,4 @@
-package hillel.lesson24_files;
+package hillel.lesson24_files_part1;
 
 import hillel.utils.BaseUiTest;
 import org.openqa.selenium.By;
