@@ -37,6 +37,33 @@ public class UploadDownloadTest extends BaseUiTest {
     }
 
     @Test
+    public void uploadFileTest2() throws URISyntaxException {
+        String filename = "text.txt";
+        driver.get("https://the-internet.herokuapp.com/upload");
+
+        WebElement fileInput = driver.findElement(By.id("file-upload"));
+
+        // Отримання URL Ресурсу:
+        URL resourceUrl = getClass().getClassLoader().getResource(filename);
+        if (resourceUrl == null) {
+            throw new IllegalArgumentException("Файл не знайдено");
+        }
+        //Перетворення URL в Об'єкт File:
+        File file = new File(resourceUrl.toURI());
+        // Отримання Абсолютного Шляху
+        fileInput.sendKeys(file.getAbsolutePath());
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.attributeContains(fileInput,"value", filename));
+
+        WebElement uploadBtn = driver.findElement(By.id("file-submit"));
+        uploadBtn.submit();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='File Uploaded!']")));
+        System.out.println("done");
+    }
+
+    @Test
     public void downloadFileTest() {
         driver.get("https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.16/");
 

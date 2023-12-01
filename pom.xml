@@ -16,6 +16,7 @@
         <surefire-plugin.version>3.2.1</surefire-plugin.version>
         <selenium.version>4.15.0</selenium.version>
         <webdrivermanager.version>5.6.1</webdrivermanager.version>
+        <selenide.version>7.0.3</selenide.version>
         <env>dev</env>
     </properties>
 
@@ -36,6 +37,12 @@
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

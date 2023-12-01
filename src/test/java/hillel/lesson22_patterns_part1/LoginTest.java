@@ -5,8 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class LoginTest {
 
@@ -26,7 +27,7 @@ public class LoginTest {
         driver.findElement(By.cssSelector("button[type='submit']")).click();
 
         String secureHeader = driver.findElement(By.tagName("h2")).getText();
-        Assert.assertEquals(secureHeader, "Secure Area");
+        assertEquals(secureHeader, "Secure Area");
 
         driver.quit();
     }
