@@ -1,8 +1,8 @@
 package hillel.lesson22_patterns_part1;
 
-import hillel.pages.lesson22.LoginPage;
-import hillel.pages.lesson22.MainPage;
-import hillel.pages.lesson22.SecurePage;
+import hillel.ui.pages.lesson22.LoginPage;
+import hillel.ui.pages.lesson22.MainPage;
+import hillel.ui.pages.lesson22.SecurePage;
 import hillel.utils.BaseUiTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;

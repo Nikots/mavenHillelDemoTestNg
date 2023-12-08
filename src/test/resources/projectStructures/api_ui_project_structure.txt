@@ -1,0 +1,53 @@
+project-name/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── example/
+│   │               ├── api/
+│   │               │   ├── clients/
+│   │               │   │   └── UserApiClient.java
+│   │               │   ├── dto/
+│   │               │   │   ├── UserDTO.java
+│   │               │   │   └── BookingDTO.java
+│   │               │   └── utils/
+│   │               │       └── ApiUtils.java
+│   │               │
+│   │               ├── ui/
+│   │               │   ├── pages/
+│   │               │   │   ├── LoginPage.java
+│   │               │   │   └── PersonalDetailsPage.java
+│   │               │   └── utils/
+│   │               │       └── WebDriverUtils.java
+│   │               │
+│   │               └── common/
+│   │                   └── // Загальні класи та утиліти
+│   │
+│   └── test/
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           ├── api/
+│       │           │   └── tests/
+│       │           │       ├── UserApiTest.java
+│       │           │       └── BookingApiTest.java
+│       │           │
+│       │           ├── ui/
+│       │           │   └── tests/
+│       │           │       ├── LoginTest.java
+│       │           │       └── PersonalDetailsTest.java
+│       │           │
+│       │           └── common/
+│       │               └── // Загальні тести або утиліти
+│       │
+│       └── resources/
+│           ├── api/
+│           │   └── endpoints.properties
+│           │
+│           └── ui/
+│               └── testdata/
+│                   └── testdata.properties
+│
+├── pom.xml
+└── README.md

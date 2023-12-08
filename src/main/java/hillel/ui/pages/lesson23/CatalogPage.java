@@ -1,7 +1,6 @@
-package hillel.pages.lesson23;
+package hillel.ui.pages.lesson23;
 
-import hillel.pages.BasePage;
-import hillel.pages.lesson23.components.HeaderComponent;
+import hillel.ui.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 
 public class CatalogPage extends BasePage {

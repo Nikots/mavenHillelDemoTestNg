@@ -1,6 +1,6 @@
-package hillel.pages;
+package hillel.ui.pages;
 
-import hillel.pages.lesson23.components.HeaderComponent;
+import hillel.ui.pages.lesson23.components.HeaderComponent;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

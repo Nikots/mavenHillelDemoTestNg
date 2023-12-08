@@ -1,8 +1,8 @@
 package hillel.lesson26_selenide;
 
-import hillel.pagesSelenide.LoginPageSelenide;
-import hillel.pagesSelenide.MainPageSelenide;
-import hillel.pagesSelenide.SecurePageSelenide;
+import hillel.ui.pagesSelenide.LoginPageSelenide;
+import hillel.ui.pagesSelenide.MainPageSelenide;
+import hillel.ui.pagesSelenide.SecurePageSelenide;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

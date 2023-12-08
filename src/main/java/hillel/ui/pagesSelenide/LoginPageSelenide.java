@@ -1,4 +1,4 @@
-package hillel.pagesSelenide;
+package hillel.ui.pagesSelenide;
 
 import com.codeborne.selenide.SelenideElement;
 

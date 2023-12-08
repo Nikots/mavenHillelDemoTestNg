@@ -1,4 +1,4 @@
-package hillel.pages.lesson23.components;
+package hillel.ui.pages.lesson23.components;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

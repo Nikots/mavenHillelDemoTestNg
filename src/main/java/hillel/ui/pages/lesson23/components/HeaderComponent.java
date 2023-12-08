@@ -1,8 +1,8 @@
-package hillel.pages.lesson23.components;
+package hillel.ui.pages.lesson23.components;
 
-import hillel.pages.BasePage;
-import hillel.pages.lesson23.CatalogPage;
-import hillel.pages.lesson23.MainPage;
+import hillel.ui.pages.BasePage;
+import hillel.ui.pages.lesson23.CatalogPage;
+import hillel.ui.pages.lesson23.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 

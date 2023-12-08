@@ -1,6 +1,6 @@
 package hillel.utils;
 
-import hillel.pages.lesson22.MainPage;
+import hillel.ui.pages.lesson22.MainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package hillel.pagesSelenide;
+package hillel.ui.pagesSelenide;
 
 import static com.codeborne.selenide.Selenide.$;
 

@@ -1,7 +1,7 @@
 package hillel.lesson23_patterns_part2;
 
-import hillel.pages.lesson23.CatalogPage;
-import hillel.pages.lesson23.MainPage;
+import hillel.ui.pages.lesson23.CatalogPage;
+import hillel.ui.pages.lesson23.MainPage;
 import hillel.utils.BaseUiTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;

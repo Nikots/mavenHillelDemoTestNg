@@ -1,7 +1,7 @@
 package hillel.lesson26_selenide;
 
 import com.codeborne.selenide.Configuration;
-import hillel.pagesSelenide.MainPageSelenide;
+import hillel.ui.pagesSelenide.MainPageSelenide;
 import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Selenide.open;
