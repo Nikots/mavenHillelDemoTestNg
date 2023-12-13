@@ -8,12 +8,12 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest {
 
-    @BeforeSuite
-    @Parameters({"url", "browser"})
-    public void setup(String url, String browser) {
-        System.out.println("browser started: " + browser);
-        System.out.println("url opened: " + url);
-    }
+//    @BeforeSuite
+//    @Parameters({"url", "browser"})
+//    public void setup(String url, String browser) {
+//        System.out.println("browser started: " + browser);
+//        System.out.println("url opened: " + url);
+//    }
 
     @AfterSuite
     public void tearDown() {

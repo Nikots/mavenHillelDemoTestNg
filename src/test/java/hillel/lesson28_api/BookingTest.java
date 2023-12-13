@@ -4,8 +4,10 @@ import hillel.api.dto.BookingDTO;
 import hillel.api.dto.BookingIdDTO;
 import hillel.api.dto.BookingResponseDTO;
 import hillel.api.services.BookingService;
+import hillel.listeners.ApiTestListener;
 import io.restassured.response.Response;
 import org.hamcrest.MatcherAssert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -15,6 +17,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+@Listeners(ApiTestListener.class)
 public class BookingTest {
     BookingService bookingService = new BookingService();
 

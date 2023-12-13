@@ -27,11 +27,13 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage setUserName(String userName) {
+        logger.info("setUserName");
         setText(usernameField, userName);
         return this;
     }
 
     public LoginPage setPassword(String password) {
+        logger.info("setPassword");
         setText(passwordField, password);
         return this;
     }
