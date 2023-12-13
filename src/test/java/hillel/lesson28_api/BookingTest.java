@@ -55,6 +55,4 @@ public class BookingTest {
 
         assertEquals(actualResponseDto.getBooking().getTotalPrice(), expectedBooking.getTotalPrice());
     }
-
-
 }
