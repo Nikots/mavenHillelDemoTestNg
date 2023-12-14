@@ -14,5 +14,5 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingResponseDTO {
     @JsonProperty("bookingid") BookingIdDTO bookingId;
-    @JsonProperty("booking") BookingDTO booking;
+    BookingDTO booking;
 }
