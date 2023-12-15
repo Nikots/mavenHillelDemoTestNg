@@ -1,5 +1,6 @@
 package hillel.api.services;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.ErrorLoggingFilter;
@@ -15,9 +16,10 @@ public class BaseService {
                 .setBaseUri(BASE_URL)
                 .setContentType("application/json")
                 .setAccept("application/json")
-                .addFilter(new RequestLoggingFilter())
-                .addFilter(new ResponseLoggingFilter())
-                .addFilter(new ErrorLoggingFilter())
+//                .addFilter(new RequestLoggingFilter())
+//                .addFilter(new ResponseLoggingFilter())
+//                .addFilter(new ErrorLoggingFilter())
+                .addFilter(new AllureRestAssured())
                 .build();
     }
 

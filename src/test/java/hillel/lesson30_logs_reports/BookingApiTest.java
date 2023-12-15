@@ -1,9 +1,10 @@
-package hillel.lesson28_api;
+package hillel.lesson30_logs_reports;
 
 import hillel.api.dto.BookingDTO;
 import hillel.api.dto.BookingIdDTO;
 import hillel.api.dto.BookingResponseDTO;
 import hillel.api.services.BookingService;
+import hillel.lesson28_api.TestData;
 import hillel.listeners.ApiTestListener;
 import io.restassured.response.Response;
 import org.hamcrest.MatcherAssert;
@@ -18,10 +19,10 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 @Listeners(ApiTestListener.class)
-public class BookingTest {
+public class BookingApiTest {
     BookingService bookingService = new BookingService();
 
-    @Test
+    @Test(enabled = false)
     public void checkBookingIdsV1() {
         Response response = bookingService.getBookingIdsList();
 
@@ -33,14 +34,14 @@ public class BookingTest {
         assertTrue(responseString.contains("12"));
     }
 
-    @Test
+    @Test//failed
     public void checkBookingIdsV2() {
         BookingIdDTO expectedId1 = new BookingIdDTO(1);
         BookingIdDTO expectedId2 = new BookingIdDTO(12);
         Response response = bookingService.getBookingIdsList();
 
         List<BookingIdDTO> idList = response.then()
-                .statusCode(200)
+                .statusCode(201)
                 .extract()
                 .body().jsonPath().getList("", BookingIdDTO.class);
 

@@ -14,12 +14,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <testng.version>7.8.0</testng.version>
         <surefire-plugin.version>3.2.1</surefire-plugin.version>
-        <selenium.version>4.15.0</selenium.version>
+        <selenium.version>4.16.0</selenium.version>
         <webdrivermanager.version>5.6.1</webdrivermanager.version>
         <selenide.version>7.0.3</selenide.version>
         <rest-assured.version>5.3.2</rest-assured.version>
         <lombok.version>1.18.30</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
+        <slf4j.version>2.0.9</slf4j.version>
+        <allure.version>2.25.0</allure.version>
+        <aspectj.version>1.9.21</aspectj.version>
+        <allure.maven.version>2.12.0</allure.maven.version>
         <env>dev</env>
     </properties>
 
@@ -28,7 +32,12 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -61,7 +70,6 @@
             <artifactId>javafaker</artifactId>
             <version>${javafaker.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -74,7 +82,36 @@
             <scope>test</scope>
         </dependency>
 
+        <!--dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <!-version>1.7.29</version-->
+            <!--version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-reload4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-rest-assured</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -90,6 +127,27 @@
                     <systemPropertyVariables>
                         <env>${env}</env>
                     </systemPropertyVariables>
+
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure.maven.version}</version>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                    <reportDirectory>${project.basedir}/allure-report</reportDirectory>
+                    <propertiesFilePath>${project.basedir}/src/test/resources/allure.properties</propertiesFilePath>
                 </configuration>
             </plugin>
         </plugins>

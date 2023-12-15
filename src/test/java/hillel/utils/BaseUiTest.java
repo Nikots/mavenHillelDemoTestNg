@@ -6,6 +6,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseUiTest {
+
     public WebDriver driver;
     public final String DOWNLOAD_FOLDER_PATH = "target/downloads";
 
@@ -39,7 +42,6 @@ public class BaseUiTest {
     }
 
     public MainPage openMainPage() {
-        driver.get("https://the-internet.herokuapp.com/");
         return new MainPage(driver);
     }
 
