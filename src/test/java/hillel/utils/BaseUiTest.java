@@ -17,7 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseUiTest {
-    private static final Logger logger = LoggerFactory.getLogger(BaseUiTest.class);
 
     public WebDriver driver;
     public final String DOWNLOAD_FOLDER_PATH = "target/downloads";
@@ -43,7 +42,6 @@ public class BaseUiTest {
     }
 
     public MainPage openMainPage() {
-        driver.get("https://the-internet.herokuapp.com/");
         return new MainPage(driver);
     }
 

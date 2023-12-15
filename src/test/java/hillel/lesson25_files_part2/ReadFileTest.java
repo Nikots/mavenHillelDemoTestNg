@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReadFileTest {
-    private final String filePath = "src/test/resources/username.csv";
+    private final String filePath = "src/test/resources/random/username.csv";
 
     @Test
     public void testCsvHeaders() throws IOException {
@@ -78,8 +78,8 @@ public class ReadFileTest {
 
     @Test
     public void testContentByBytes() throws IOException {
-        String image1 = "src/test/resources/img1.jpeg";
-        String image2 = "src/test/resources/img2.jpeg";
+        String image1 = "src/test/resources/random/img1.jpeg";
+        String image2 = "src/test/resources/random/img2.jpeg";
 
         byte[] file1 = Files.readAllBytes(Paths.get(image1));
         byte[] file2 = Files.readAllBytes(Paths.get(image2));

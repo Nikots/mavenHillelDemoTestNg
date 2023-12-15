@@ -1,6 +1,7 @@
 package hillel.ui.pages.lesson22;
 
 import hillel.ui.pages.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -43,6 +44,7 @@ public class LoginPage extends BasePage {
         return new SecurePage(driver);
     }
 
+    @Step("Login to system")
     public SecurePage login(String userName, String password) {
         setUserName(userName);
         setPassword(password);

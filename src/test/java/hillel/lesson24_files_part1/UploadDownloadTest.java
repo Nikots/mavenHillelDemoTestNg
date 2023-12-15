@@ -19,7 +19,7 @@ public class UploadDownloadTest extends BaseUiTest {
     public void uploadFileTest() {
         driver.get("https://smallseotools.com/plagiarism-checker/");
 
-        URL url = getClass().getClassLoader().getResource("text.txt");
+        URL url = getClass().getClassLoader().getResource("random/text.txt");
         if (url == null) throw new IllegalArgumentException("file not found");
         File file;
         try {
@@ -38,7 +38,7 @@ public class UploadDownloadTest extends BaseUiTest {
 
     @Test
     public void uploadFileTest2() throws URISyntaxException {
-        String filename = "text.txt";
+        String filename = "random/text.txt";
         driver.get("https://the-internet.herokuapp.com/upload");
 
         WebElement fileInput = driver.findElement(By.id("file-upload"));

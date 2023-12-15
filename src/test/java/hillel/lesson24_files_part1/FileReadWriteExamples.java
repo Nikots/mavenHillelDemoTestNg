@@ -86,7 +86,7 @@ public class FileReadWriteExamples {
     @Test
     public void readFile() {
         // Вкажіть шлях до файлу, який потрібно зчитати
-        String filePath = "src/test/resources/text.txt";
+        String filePath = "src/test/resources/random/text.txt";
 
 
         try (FileReader fileReader = new FileReader(filePath);
@@ -104,7 +104,7 @@ public class FileReadWriteExamples {
 
     @Test
     public void readFileNIO() {
-        String filePath = "src/test/resources/text.txt";
+        String filePath = "src/test/resources/random/text.txt";
 
         try {
             // Читання всіх рядків з файлу

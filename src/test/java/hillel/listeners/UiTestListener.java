@@ -48,11 +48,13 @@ public class UiTestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         logger.error("Test failed: " + result.getMethod().getMethodName());
+
         WebDriver driver = WebDriverProvider.getDriver();
         if (driver != null) {
             String screenshotPath = ScreenshotHelper.takeScreenshot(driver, result.getMethod().getMethodName());
             logger.error("Screenshot taken: " + screenshotPath);
         }
+
         closeDriver();
     }
 

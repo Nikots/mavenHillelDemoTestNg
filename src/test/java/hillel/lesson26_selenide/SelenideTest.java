@@ -58,7 +58,7 @@ public class SelenideTest {
 
     @Test
     public void uploadFileTestSelenide() throws URISyntaxException {
-        String filename = "text.txt";
+        String filename = "random/text.txt";
         open("/upload");
 
         // Отримання URL Ресурсу:
