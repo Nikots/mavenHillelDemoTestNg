@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Ui Tests">
+    <test name="All Waits Tests" parallel="methods">
+        <classes>
+            <class name="hillel.lesson19_21_uiTests.WaitsTest"></class>
+        </classes>
+    </test>
+</suite>

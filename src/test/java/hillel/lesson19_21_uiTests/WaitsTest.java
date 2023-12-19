@@ -1,5 +1,6 @@
 package hillel.lesson19_21_uiTests;
 
+import hillel.utils.BaseUiProviderTest;
 import hillel.utils.BaseUiTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -17,11 +18,14 @@ import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import static hillel.utils.WebDriverProvider.getDriver;
+
 //Lesson #20
-public class WaitsTest extends BaseUiTest {
+public class WaitsTest extends BaseUiProviderTest {
 
     @Test
     public void testSleep() throws InterruptedException {
+        WebDriver driver = getDriver();
         String url = "https://the-internet.herokuapp.com/dynamic_controls";
         driver.get(url);
 
@@ -36,6 +40,7 @@ public class WaitsTest extends BaseUiTest {
 
     @Test
     public void testImplicitWait() {
+        WebDriver driver = getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String url = "https://the-internet.herokuapp.com/dynamic_controls";
         driver.get(url);
@@ -49,6 +54,7 @@ public class WaitsTest extends BaseUiTest {
 
     @Test
     public void testExplicitWaitNoSuchElement() {
+        WebDriver driver = getDriver();
         String url = "https://the-internet.herokuapp.com/dynamic_controls";
         driver.get(url);
 
@@ -64,6 +70,7 @@ public class WaitsTest extends BaseUiTest {
 
     @Test
     public void testWithActions() {
+        WebDriver driver = getDriver();
         driver.get("https://demos.telerik.com/aspnet-ajax/ajaxloadingpanel/overview/defaultcs.aspx");
 
         By locator = By.xpath("//button[@type='submit']");
@@ -81,6 +88,7 @@ public class WaitsTest extends BaseUiTest {
 
     @Test
     public void testAjaxManager() {
+        WebDriver driver = getDriver();
         driver.get("https://demos.telerik.com/aspnet-ajax/ajaxmanager/overview/defaultcs.aspx");
 
         Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -108,6 +116,7 @@ public class WaitsTest extends BaseUiTest {
 
     @Test
     public void testFluentWait() {
+        WebDriver driver = getDriver();
         FluentWait<WebDriver> fluentWait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofSeconds(5))

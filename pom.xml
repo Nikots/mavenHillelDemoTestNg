@@ -24,6 +24,7 @@
         <allure.version>2.25.0</allure.version>
         <aspectj.version>1.9.21</aspectj.version>
         <allure.maven.version>2.12.0</allure.maven.version>
+        <browserup.version>2.1.2</browserup.version>
         <env>dev</env>
     </properties>
 
@@ -111,6 +112,13 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-rest-assured</artifactId>
             <version>${allure.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.browserup</groupId>
+            <artifactId>browserup-proxy-core</artifactId>
+            <version>${browserup.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

@@ -22,18 +22,19 @@ public class AllureListener implements TestLifecycleListener {
     public final String DOWNLOAD_FOLDER_PATH = "target/downloads";
     @Override
     public void beforeTestStart(TestResult result) {
-        WebDriverManager.chromedriver().setup();
-
-        ChromeOptions options = new ChromeOptions();
-        Map<String, Object> prefs = new HashMap<>();
-        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
-        options.setExperimentalOption("prefs", prefs);
-
-        WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().setSize(new Dimension(1440, 1100));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-
-        WebDriverProvider.setDriver(driver);    }
+//        WebDriverManager.chromedriver().setup();
+//
+//        ChromeOptions options = new ChromeOptions();
+//        Map<String, Object> prefs = new HashMap<>();
+//        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
+//        options.setExperimentalOption("prefs", prefs);
+//
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.manage().window().setSize(new Dimension(1440, 1100));
+//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+//
+//        WebDriverProvider.setDriver(driver);
+        }
 
     @Override
     public void beforeTestStop(TestResult result) {
