@@ -35,9 +35,9 @@ public class BaseUiTest {
 //
 //        driver = new ChromeDriver(options);
         WebDriverManager.firefoxdriver().setup();
-        FirefoxOptions options = new FirefoxOptions();
+        //FirefoxOptions options = new FirefoxOptions();
        // options.addArguments("--headless");
-        driver = new FirefoxDriver(options);
+        driver = new FirefoxDriver();
         driver.manage().window().setSize(new Dimension(1440, 1100));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }
