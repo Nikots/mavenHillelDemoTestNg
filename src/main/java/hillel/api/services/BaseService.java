@@ -19,7 +19,7 @@ public class BaseService {
 //                .addFilter(new RequestLoggingFilter())
 //                .addFilter(new ResponseLoggingFilter())
 //                .addFilter(new ErrorLoggingFilter())
-                .addFilter(new AllureRestAssured())
+//                .addFilter(new AllureRestAssured())
                 .build();
     }
 
