@@ -25,7 +25,7 @@ public class BaseUiTest {
 
     @BeforeMethod
     public void setup() {
-        WebDriverManager.firefoxdriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
 
 //        ChromeOptions options = new ChromeOptions();
 //        Map<String, Object> prefs = new HashMap<String, Object>();
@@ -34,8 +34,9 @@ public class BaseUiTest {
 //        options.addArguments("--headless");
 //
 //        driver = new ChromeDriver(options);
+        WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new FirefoxDriver(options);
         driver.manage().window().setSize(new Dimension(1440, 1100));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
