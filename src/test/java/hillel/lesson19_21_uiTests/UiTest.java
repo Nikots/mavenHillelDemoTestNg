@@ -1,6 +1,7 @@
 package hillel.lesson19_21_uiTests;
 
 import hillel.listeners.UiTestListener;
+import hillel.utils.BaseUiProviderTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,8 +11,8 @@ import org.testng.annotations.Test;
 
 import static hillel.utils.WebDriverProvider.getDriver;
 
-@Listeners(UiTestListener.class)
-public class UiTest {
+//@Listeners(UiTestListener.class)
+public class UiTest extends BaseUiProviderTest {
 
     @Test
     public void selectFromMenu() {
