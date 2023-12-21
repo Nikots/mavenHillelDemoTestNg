@@ -6,6 +6,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
@@ -25,12 +27,16 @@ public class BaseUiTest {
     public void setup() {
         WebDriverManager.chromedriver().setup();
 
-        ChromeOptions options = new ChromeOptions();
-        Map<String, Object> prefs = new HashMap<String, Object>();
-        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
-        options.setExperimentalOption("prefs", prefs);
-
-        driver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions();
+//        Map<String, Object> prefs = new HashMap<String, Object>();
+//        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
+//        options.setExperimentalOption("prefs", prefs);
+//        options.addArguments("--headless");
+//
+//        driver = new ChromeDriver(options);
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        driver = new FirefoxDriver(options);
         driver.manage().window().setSize(new Dimension(1440, 1100));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }
