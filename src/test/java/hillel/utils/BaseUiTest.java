@@ -25,7 +25,7 @@ public class BaseUiTest {
 
     @BeforeMethod
     public void setup() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
 
 //        ChromeOptions options = new ChromeOptions();
 //        Map<String, Object> prefs = new HashMap<String, Object>();
