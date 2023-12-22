@@ -30,6 +30,8 @@ public class BaseUiProviderTest {
         options.setExperimentalOption("prefs", prefs);
        // options.addArguments("--headless", "--window-size=1920,1200");
       //  WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+
+        options.setBinary("/snap/bin/chromium");
         WebDriver driver = new ChromeDriver((options));
 
         driver.manage().window().setSize(new Dimension(1440, 1100));
