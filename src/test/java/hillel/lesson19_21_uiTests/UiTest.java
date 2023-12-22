@@ -1,6 +1,7 @@
 package hillel.lesson19_21_uiTests;
 
 import hillel.utils.BaseUiProviderTest;
+import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,7 @@ import org.testng.annotations.Test;
 
 import static hillel.utils.WebDriverProvider.getDriver;
 
+@Story("Test story")
 public class UiTest extends BaseUiProviderTest {
 
     @Test
