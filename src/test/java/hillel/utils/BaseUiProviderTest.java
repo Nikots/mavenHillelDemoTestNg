@@ -26,9 +26,11 @@ public class BaseUiProviderTest {
 
     @BeforeMethod
     public void setup() throws MalformedURLException {
-        URL gridUrl = new URL("http://localhost:4444/wd/hub"); // Замініть hostname на адресу сервера Selenium Grid
+//        URL gridUrl = new URL("http://localhost:4444/wd/hub"); // Замініть hostname на адресу сервера Selenium Grid
+        URL gridUrl = new URL("http://192.168.64.2:4444/wd/hub"); // Замініть hostname на адресу сервера Selenium Grid
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("firefox"); // Можете вибрати firefox, chrome тощо
+     //   capabilities.setBrowserName("chrome"); // Можете вибрати firefox, chrome тощо
 
         WebDriver driver = new RemoteWebDriver(gridUrl, capabilities);
 
@@ -38,21 +40,21 @@ public class BaseUiProviderTest {
         WebDriverProvider.setDriver(driver);
     }
 
-    @AfterMethod
-    public void tearDown() {
-       closeDriver();
-    }
-
-    public MainPage openMainPage() {
-        return new MainPage(WebDriverProvider.getDriver());
-    }
-
-    public void closeDriver() {
-        if (WebDriverProvider.getDriver() != null) {
-            WebDriverProvider.getDriver().quit();
-            WebDriverProvider.removeDriver();
-        }
-
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//       closeDriver();
+//    }
+//
+//    public MainPage openMainPage() {
+//        return new MainPage(WebDriverProvider.getDriver());
+//    }
+//
+//    public void closeDriver() {
+//        if (WebDriverProvider.getDriver() != null) {
+//            WebDriverProvider.getDriver().quit();
+//            WebDriverProvider.removeDriver();
+//        }
+//
+//    }
 
 }

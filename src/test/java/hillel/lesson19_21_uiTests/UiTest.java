@@ -1,18 +1,15 @@
 package hillel.lesson19_21_uiTests;
 
-import hillel.listeners.ApiTestListener;
 import hillel.utils.BaseUiProviderTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static hillel.utils.WebDriverProvider.getDriver;
 
-@Listeners(ApiTestListener.class)
 public class UiTest extends BaseUiProviderTest {
 
     @Test
