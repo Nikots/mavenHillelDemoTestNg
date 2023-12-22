@@ -25,9 +25,9 @@ public class BaseUiProviderTest {
     @BeforeMethod
     public void setup() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
-        Map<String, Object> prefs = new HashMap<>();
-        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
-        options.setExperimentalOption("prefs", prefs);
+//        Map<String, Object> prefs = new HashMap<>();
+//        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
+//        options.setExperimentalOption("prefs", prefs);
        // options.addArguments("--headless", "--window-size=1920,1200");
       //  WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
 
