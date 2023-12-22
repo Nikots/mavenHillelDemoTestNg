@@ -27,21 +27,13 @@ public class BaseUiProviderTest {
     public void setup() throws MalformedURLException {
         WebDriverManager.chromiumdriver().setup();
         ChromeOptions options = new ChromeOptions();
-//        Map<String, Object> prefs = new HashMap<>();
-//        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
-//        options.setExperimentalOption("prefs", prefs);
-       // options.addArguments("--headless", "--window-size=1920,1200");
-      //  WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-
         options.setBinary("/snap/bin/chromium");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver((options));
 
         driver.manage().window().setSize(new Dimension(1440, 1100));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-//        WebDriverManager.firefoxdriver().setup();
-//        WebDriver driver = new FirefoxDriver();
-//        driver.manage().window().setSize(new Dimension(1440, 1100));
-//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
         WebDriverProvider.setDriver(driver);
     }
