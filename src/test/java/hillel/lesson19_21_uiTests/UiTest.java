@@ -3,6 +3,7 @@ package hillel.lesson19_21_uiTests;
 import hillel.listeners.UiTestListener;
 import hillel.utils.BaseUiProviderTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -32,8 +33,10 @@ public class UiTest extends BaseUiProviderTest {
         WebElement iframe = driver.findElement(By.id("mce_0_ifr"));
         driver.switchTo().frame(iframe);
 
-        WebElement field = driver.findElement(By.xpath("//*[@id='tinymce']/p"));
-        field.sendKeys("java qa auto");
+        WebElement field = driver.findElement(By.cssSelector("#tinymce p"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String date = "java qa auto";
+        js.executeScript("arguments[0].append('" + date+"')",field);
 
         driver.switchTo().defaultContent();
 
