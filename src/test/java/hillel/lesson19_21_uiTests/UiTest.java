@@ -1,6 +1,6 @@
 package hillel.lesson19_21_uiTests;
 
-import hillel.listeners.UiTestListener;
+import hillel.listeners.ApiTestListener;
 import hillel.utils.BaseUiProviderTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import static hillel.utils.WebDriverProvider.getDriver;
 
-//@Listeners(UiTestListener.class)
+@Listeners(ApiTestListener.class)
 public class UiTest extends BaseUiProviderTest {
 
     @Test
