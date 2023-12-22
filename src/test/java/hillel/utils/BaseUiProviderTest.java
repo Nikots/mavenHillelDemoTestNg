@@ -28,7 +28,7 @@ public class BaseUiProviderTest {
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
         options.setExperimentalOption("prefs", prefs);
-        options.addArguments("--headless", "--window-size=1920,1200");
+       // options.addArguments("--headless", "--window-size=1920,1200");
       //  WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
         WebDriver driver = new ChromeDriver((options));
 
