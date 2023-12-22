@@ -24,6 +24,7 @@ public class BaseUiProviderTest {
 
     @BeforeMethod
     public void setup() throws MalformedURLException {
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 //        Map<String, Object> prefs = new HashMap<>();
 //        prefs.put("download.default_directory", new File(DOWNLOAD_FOLDER_PATH).getAbsolutePath());
